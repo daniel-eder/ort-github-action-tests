@@ -23,7 +23,7 @@ jobs:
             upload-results
       - name: 
         id: print-result-tree
-        run: tree -d ~/.ort > ~/result.tree.txt
+        run: tree -d ~/ > ~/result.tree.txt
       - uses: actions/upload-artifact@v3
         with:
           name: result.tree.txt
