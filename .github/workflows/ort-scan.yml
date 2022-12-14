@@ -15,6 +15,7 @@ jobs:
           # manually set steps to run to include scanner
           run: > 
             cache-dependencies,
+            cache-scan-results,
             metadata-labels,
             analyzer,
             scanner,
