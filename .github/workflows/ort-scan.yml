@@ -13,7 +13,7 @@ jobs:
         with:
           ort-config-repository: 'https://github.com/daniel-eder/ort-config'
           # manually set steps to run to include scanner
-          default: > 
+          run: > 
             cache-dependencies,
             metadata-labels,
             analyzer,
