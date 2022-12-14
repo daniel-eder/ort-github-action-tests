@@ -12,6 +12,15 @@ jobs:
         uses: oss-review-toolkit/ort-ci-github-action@v1
         with:
           ort-config-repository: 'https://github.com/daniel-eder/ort-config'
+          # manually set steps to run to include scanner
+          default: > 
+            cache-dependencies,
+            metadata-labels,
+            analyzer,
+            scanner,
+            reporter,
+            upload-results,
+            upload-evaluation-result
       - name: 
         id: print-result-tree
         run: tree -d ~/.ort > ~/result.tree.txt
@@ -19,3 +28,4 @@ jobs:
         with:
           name: result.tree.txt
           path: ~/result.tree.txt
+       
