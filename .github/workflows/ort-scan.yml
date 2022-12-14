@@ -9,7 +9,7 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v3
       - name: Run GitHub Action for ORT
-        uses: daniel-eder/ort-ci-github-action@main
+        uses: oss-review-toolkit/ort-ci-github-action@main
         with:
           ort-config-repository: 'https://github.com/daniel-eder/ort-config'
           # manually set steps to run to include scanner
