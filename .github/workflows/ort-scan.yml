@@ -12,7 +12,6 @@ jobs:
         uses: oss-review-toolkit/ort-ci-github-action@v1
         with:
           ort-config-repository: 'https://github.com/daniel-eder/ort-config'
-          ort-config-revision: '95d676332b76b12c685167857722e489809c31b4'
       - name: 
         id: print-result-tree
         run: tree -d ~/.ort > ~/result.tree.txt
