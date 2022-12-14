@@ -9,7 +9,7 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v3
       - name: Run GitHub Action for ORT
-        uses: oss-review-toolkit/ort-ci-github-action@v1
+        uses: daniel-eder/ort-ci-github-action@main
         with:
           ort-config-repository: 'https://github.com/daniel-eder/ort-config'
           # manually set steps to run to include scanner
@@ -19,8 +19,7 @@ jobs:
             analyzer,
             scanner,
             reporter,
-            upload-results,
-            upload-evaluation-result
+            upload-results
       - name: 
         id: print-result-tree
         run: tree -d ~/.ort > ~/result.tree.txt
